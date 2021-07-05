@@ -1,0 +1,14 @@
+body{
+    background-color: #222;
+    color: #fff;
+    font-family: Roboto Condensed;
+    text-align: center;
+}
+
+h1, h2, h3{
+    font-weight: 200;
+}
+
+h5{
+margin: 3px;
+}

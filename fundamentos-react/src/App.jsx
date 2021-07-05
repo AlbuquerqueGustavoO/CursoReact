@@ -1,0 +1,66 @@
+import "./App.css"
+import React from "react"
+
+import Card from "./components/layout/Card"
+import Primeiro from './components/basicos/Primeiro'
+import ComParametro from './components/basicos/ComParametro'
+import Fragmento from './components/basicos/Fragmento'
+import Aleatorio from "./components/basicos/Aleatorio"
+import Familia from "./components/basicos/Familia"
+import FamiliaMembro from "./components/basicos/FamiliaMembro"
+import ListaAlunos from "./components/repeticao/ListaAlunos"
+import TabelaProdutos from "./components/repeticao/TabelaProdutos"
+import ParOuImpar from "./components/condicional/ParOuImpar"
+import UsuarioInfo from "./components/condicional/UsuarioInfo"
+
+export default () =>(
+    <div className="App">
+        <h1>Fundamentos React</h1>
+
+        <div className="Cards">
+
+        <Card titulo="#8 - Desafio Par ou Impar" color="#FF4C50" >
+                <ParOuImpar numero={21}></ParOuImpar>
+                <UsuarioInfo usuario={{nome: 'Gustavo'}}></UsuarioInfo>
+                <UsuarioInfo usuario={{email: 'Gustavo@lindo.com'}}></UsuarioInfo>
+                <UsuarioInfo usuario={{telefone: '9999999'}}></UsuarioInfo>
+            </Card>
+
+            <Card titulo="#7 - Desafio Repetição em Tabela" color="#FF4C50" >
+                <TabelaProdutos></TabelaProdutos>
+            </Card>
+
+            <Card titulo="#6 - Lista de repetição" color="#FF4C65" >
+                <ListaAlunos></ListaAlunos>
+            </Card>
+            <Card titulo="#5 - Componente Filho" color="#00C8F8" >
+                <Familia sobreNome="FORT">
+                    <FamiliaMembro nome="Gustavo"></FamiliaMembro>
+                    <FamiliaMembro nome="Creuza"></FamiliaMembro>
+                    <FamiliaMembro nome="Ronaldo"></FamiliaMembro>
+                </Familia>
+            </Card>
+
+            <Card titulo="#4 - Desafio Aleatório" color="#FA6900">
+                <Aleatorio min={1} max={10} />
+                <Aleatorio min={1} max={10} />
+                <Aleatorio min={1} max={10} />
+            </Card>
+
+            <Card titulo="#3 - Componente Fragmento" color="#E94C6F">
+                <Fragmento />
+            </Card>
+
+            <Card titulo="#2 - Componente Parâmetro" color="#E8B71A">
+                <ComParametro
+                    titulo="Situação do aluno:"
+                    aluno="Pedro"
+                    nota="9.5" />
+            </Card>
+
+            <Card titulo="#1 - Primeiro Componente" color="#588C73">
+                <Primeiro></Primeiro>
+            </Card>
+        </div>
+    </div>
+)
