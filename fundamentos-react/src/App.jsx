@@ -12,18 +12,28 @@ import ListaAlunos from "./components/repeticao/ListaAlunos"
 import TabelaProdutos from "./components/repeticao/TabelaProdutos"
 import ParOuImpar from "./components/condicional/ParOuImpar"
 import UsuarioInfo from "./components/condicional/UsuarioInfo"
+import DiretaPai from "./components/comunicacao/DiretaPai"
+import IndiretaPai from "./components/comunicacao/IndiretaPai"
 
-export default () =>(
+export default () => (
     <div className="App">
         <h1>Fundamentos React</h1>
 
         <div className="Cards">
+       
+            <Card titulo="#10 - Comunicação Indireta" color="#8BAD39" >
+                <IndiretaPai></IndiretaPai>
+            </Card>
 
-        <Card titulo="#8 - Desafio Par ou Impar" color="#FF4C50" >
+            <Card titulo="#9 - Comunicação Direta" color="#F5" >
+                <DiretaPai></DiretaPai>
+            </Card>
+
+            <Card titulo="#8 - Desafio Par ou Impar" color="#FF4C" >
                 <ParOuImpar numero={21}></ParOuImpar>
-                <UsuarioInfo usuario={{nome: 'Gustavo'}}></UsuarioInfo>
-                <UsuarioInfo usuario={{email: 'Gustavo@lindo.com'}}></UsuarioInfo>
-                <UsuarioInfo usuario={{telefone: '9999999'}}></UsuarioInfo>
+                <UsuarioInfo usuario={{ nome: 'Gustavo' }}></UsuarioInfo>
+                <UsuarioInfo usuario={{ email: 'Gustavo@lindo.com' }}></UsuarioInfo>
+                <UsuarioInfo usuario={{ telefone: '9999999' }}></UsuarioInfo>
             </Card>
 
             <Card titulo="#7 - Desafio Repetição em Tabela" color="#FF4C50" >
